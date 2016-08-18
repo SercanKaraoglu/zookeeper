@@ -8,8 +8,7 @@ RUN curl -fL http://archive.apache.org/dist/zookeeper/zookeeper-3.4.8/zookeeper-
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
-RUN ["/bin/ln","-s","/opt/app/zookeeper/zookeeper-3.4.8","/opt/app/zookeeper/default"]
 
 EXPOSE 2181 2888 3888
 
-CMD ["/opt/app/zookeeper/default/bin/zkServer.sh","start-foreground"]
+CMD ["/opt/app/zookeeper/bin/zkServer.sh","start-foreground"]
